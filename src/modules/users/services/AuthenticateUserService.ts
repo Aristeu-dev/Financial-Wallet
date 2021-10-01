@@ -1,4 +1,3 @@
-
 import { compare } from "bcryptjs";
 import { injectable, inject } from "tsyringe";
 import { sign } from "jsonwebtoken";
@@ -19,13 +18,12 @@ interface IRequest {
 class AuthenticateUserService {
   constructor(
     @inject("UsersRepository")
-    private usersRepository: IUsersRepository
+    private UsersRepository: IUsersRepository
   ) {}
   public async execute({ email, password }: IRequest): Promise<IResponse> {
-    // const usersRepository = getRepository(User);
-    console.log(email, password);
-    const user = await this.usersRepository.findByEmail(email);
-    console.log(user);
+
+    const user = await this.UsersRepository.findByEmail(email);
+
     if (!user) {
       throw new AppError("Incorrect email/password combination.", 401);
     }
