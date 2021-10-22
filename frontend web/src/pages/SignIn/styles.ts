@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import backgroundLogin from "../../assets/backgroundLogin.jpg";
 import { shade } from "polished";
 export const Container = styled.div`
@@ -6,14 +6,32 @@ export const Container = styled.div`
   display: flex;
   align-items: stretch;
 `;
+
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  place-content: center;
+  justify-content: center;
+
   width: 100%;
   max-width: 700px;
-
+`;
+const appearFromLeft = keyframes`
+  from{
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+export const AnimationContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: ${appearFromLeft} 1s;
   form {
     margin: 20px 0;
     width: 340px;
@@ -22,11 +40,10 @@ export const Content = styled.div`
       margin-bottom: 24px;
       color: #4c4c66;
     }
-    
-    
+
     a {
       color: #53b9ea;
-  
+
       margin-top: 7vh;
       text-decoration: none;
       transition: color 0.2s;
@@ -53,7 +70,6 @@ export const Content = styled.div`
     }
   }
 `;
-
 export const Background = styled.div`
   flex: 1;
   background: url(${backgroundLogin}) no-repeat center;
