@@ -62,4 +62,3 @@ This project is a personal wallet for making money transactions.
 ## Author Info
 
 - Linkedin - [Aristeu Garcia](https://www.linkedin.com/in/aristeu-garcia-7007a0202)
-
