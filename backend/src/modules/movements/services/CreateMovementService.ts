@@ -13,15 +13,15 @@ interface IRequest {
 class CreateMovimentService {
     constructor(
         @inject('MovementsRepository')
-        private movementsRepository: IMovementsRepository
+        private MovementsRepository: IMovementsRepository
     ) {
 
     }
 
     public async execute({ id_category, value, description }: IRequest): Promise<Movement> {
-        const movementsRepository = getCustomRepository(MovementsRepository);
-
-        const movement = await this.movementsRepository.create({
+        // const movementsRepository = getCustomRepository(MovementsRepository);
+        
+        const movement = await this.MovementsRepository.create({
             id_category,
             value,
             description
