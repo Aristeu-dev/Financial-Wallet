@@ -11,6 +11,7 @@ This project is a personal wallet for making money transactions.
 |----------------|---------------|---------------|----------------|-----------|
 | Sign Up | Yes  | Yes | Done | OK
 | Sign In   | Yes  | Yes | Done | OK
+| Dashboard   | Yes  | Not | 55% |
 
 #### Technologies
 
@@ -25,32 +26,32 @@ This project is a personal wallet for making money transactions.
 ### Installation
 - Run on backend folder
 
-```html
+```
     yarn install
 ```
 - (Docker) Create a database with the configuration information contained in the ormconfig.json file
-```html
+```
     https://hub.docker.com/_/postgres
 ```
 - Run migrations
-```html
+```
     yarn typeorm migration:run
 ```
 
 - Run on front-end folder
 
-```html
+```
     yarn install or yarn
 ```
 
 
 ### Run back-end
-```html
+```
     yarn dev:server
 ```
 
 ### Run front-end
-```html
+```
     yarn start
 ```
 
